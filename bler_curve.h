@@ -42,6 +42,8 @@ public:
 
 	void Create_CURVE(FILE *stream,int *curve_num,double **sinr_data,double **bler_data);
 
+	//int Select_MCS(double sinr,double BLER_require,int RBS);
+
 	int Approximate_RBS(int RBS);
 };
 

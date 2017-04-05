@@ -141,7 +141,7 @@
 
 1490737490 g:\v2x_platform\display.h
 
-1490955619 source:g:\v2x_platform\main.cpp
+1491402859 source:g:\v2x_platform\main.cpp
 	<iostream>
 	<stdlib.h>
 	<list>
@@ -151,6 +151,7 @@
 	"mt_create.h"
 	"mt2mtgain_cac.h"
 	"global_para.h"
+	"transinfo_cac.h"
 
 1490955595 g:\v2x_platform\simulation.h
 	"base_info.h"
@@ -230,4 +231,27 @@
 
 1490949828 g:\v2x_platform\extern.h
 	"system_Para.h"
+
+1491402799 g:\v2x_platform\transinfo_cac.h
+	"mt_info.h"
+	"simulation.h"
+	"bler_curve.h"
+
+1491403034 source:g:\v2x_platform\transinfo_cac.cpp
+	"stdafx.h"
+	"transinfo_cac.h"
+	"system_para.h"
+	"extern.h"
+	<stdlib.h>
+
+1491402486 g:\v2x_platform\bler_curve.h
+	<iostream>
+	<fstream>
+
+1491402686 source:g:\v2x_platform\bler_curve.cpp
+	"stdafx.h"
+	"bler_curve.h"
+	"system_para.h"
+	<stdio.h>
+	<fstream>
 

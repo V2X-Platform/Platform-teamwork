@@ -8,6 +8,7 @@
 #include "mt_create.h"
 #include "mt2mtgain_cac.h"
 #include "global_para.h"
+#include "transinfo_cac.h"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ int main()
     BASE_CREATE create_base(scenario_data);
     MT_CREATE create_mt(create_base.site_vect);
     MT2MTGAIN_CAC mt2tgain_cac(20170330);
+    TRANSINFO_CAC cac_transinfo(20170331);
+    BLER_CURVE bler_data(15);
     //***************相关类声明部分***************//
 
 
@@ -38,7 +41,7 @@ int main()
     {
         simul_time = SubFrame_index*sys_subframe_time;
         mt2tgain_cac.store_gain(ss.mt_list,ss.carrier);
-
+        cac_transinfo.Cac_Transinfo_STEP1A(ss.mt_list,ss.carrier,bler_data);
     }
 
 

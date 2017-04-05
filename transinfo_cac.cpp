@@ -2,6 +2,7 @@
 #include "transinfo_cac.h"
 #include "system_para.h"
 #include "extern.h"
+#include <stdlib.h>
 
 
 
@@ -20,7 +21,7 @@ TRANSINFO_CAC::TRANSINFO_CAC(int x)
 TRANSINFO_CAC::~TRANSINFO_CAC(void){}
 
 
-void TRANSINFO_CAC::Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<int,unordered_set<GAIN_INFO*>> &carrier)
+void TRANSINFO_CAC::Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<int,unordered_set<GAIN_INFO*>> &carrier,BLER_CURVE &bler_data)
 {
 	for(int carrier_temp=0;carrier_temp<realsubnum;carrier_temp++)
     {
@@ -29,7 +30,7 @@ void TRANSINFO_CAC::Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<i
         {
             int receive_id=(*mt_ptr)->mt_id;
             int send_id=FALSE_VALUE;
-            double total_power=0;
+            double total_power=0.0;
             double min_pl=0;
             double sinr;
             for(;carrier_ptr!=carrier[carrier_temp].end();carrier_ptr++)
@@ -49,12 +50,16 @@ void TRANSINFO_CAC::Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<i
                 }
 
             }
+
             if(send_id!=FALSE_VALUE)
             {
-                if(total_power!=0)
+                if(total_power>0.00000001)
                 {
                     sinr=RB_Txpower/min_pl/total_power;
-                    //判断语句
+                    if(TRANSINFO_CAC::Cac_Bler(bler_data,sys_RBnum,sinr))
+                    {
+                       success[send_id]++;
+                    }
                 }
                 else
                     success[send_id]++;
@@ -66,25 +71,17 @@ void TRANSINFO_CAC::Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<i
    // for(auto mt_ptr=mt_list.begin();mt_ptr!=mt_list.end();mt_ptr++)
 
 }
-void TRANSINFO_CAC::Cac_Bler(BLER_CURVE &bler_data,int RB_S)
+bool TRANSINFO_CAC::Cac_Bler(BLER_CURVE &bler_data,int RB_S,double sinr)
 {
-	boost::hellekalek1995 generator_quality(rand());
-	boost::uniform_01<boost::hellekalek1995> real_quliaty(generator_quality);
 
-	for(int layer=0;layer<link_layer;layer++)
-	{
+		double	quality = bler_data.Read_BLER(sinr,1,RB_S);//函数第二个数为MCS[layer]，先假定为1；
 
-		double	quality = bler_data.Read_BLER(sinr,MCS[layer],RB_S);
-
-		double temp_quality = real_quliaty();
+		double temp_quality = rand()/(RAND_MAX+1.0);
 
 		if(temp_quality>quality)
 		{
-
+            return 1;
 		}
 		else
-
-
-	}
-
+            return 0;
 }

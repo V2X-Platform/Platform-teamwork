@@ -30,8 +30,8 @@ public:
 
 	~TRANSINFO_CAC(void);
 
-	void Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<int,unordered_set<GAIN_INFO*>> &carrier);
-	void Cac_Bler(BLER_CURVE &bler_data,int RB_S);
+	void Cac_Transinfo_STEP1A(list<MT_INFO*> &mt_list,unordered_map<int,unordered_set<GAIN_INFO*>> &carrier,BLER_CURVE &bler_data);
+	bool Cac_Bler(BLER_CURVE &bler_data,int RB_S,double sinr);
 	//void Cac_Resinfo_STEP1C_MRC(list<MT_INFO*> &mt_list,vector<BASE_INFO*> &base_list,double simul_time,BLER_CURVE &bler_data);//----20090608---ling lisha
 	//void Cac_Resinfo_MMSE_TS(list<MT_INFO*> &mt_list,vector<BASE_INFO*> &base_list,double simul_time,BLER_CURVE &bler_data,CODEBOOK &codebook);
 };

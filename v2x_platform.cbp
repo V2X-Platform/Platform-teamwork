@@ -36,6 +36,8 @@
 		<Unit filename="base_create.h" />
 		<Unit filename="base_info.cpp" />
 		<Unit filename="base_info.h" />
+		<Unit filename="bler_curve.cpp" />
+		<Unit filename="bler_curve.h" />
 		<Unit filename="display.cpp" />
 		<Unit filename="display.h">
 			<Option target="&lt;{~None~}&gt;" />
@@ -62,6 +64,8 @@
 		<Unit filename="simulation.h" />
 		<Unit filename="stdafx.h" />
 		<Unit filename="system_para.h" />
+		<Unit filename="transinfo_cac.cpp" />
+		<Unit filename="transinfo_cac.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
