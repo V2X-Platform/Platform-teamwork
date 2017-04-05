@@ -1,0 +1,233 @@
+# depslib dependency file v1.0
+1490843172 source:e:\v2x_platform\main.cpp
+	<iostream>
+	<stdlib.h>
+	<list>
+	"scenario_para.h"
+	"simulation.h"
+	"base_create.h"
+	"mt_create.h"
+
+1490835754 e:\v2x_platform\scenario_para.h
+	"stdAfx.h"
+	"system_para.h"
+
+1490737490 e:\v2x_platform\stdafx.h
+
+1490839802 e:\v2x_platform\system_para.h
+	"stdafx.h"
+	<math.h>
+
+1490835754 source:e:\v2x_platform\scenario_para.cpp
+	"scenario_para.h"
+
+1490720724 source:e:\v2x_platform\display.cpp
+	<iostream>
+	"display.h"
+
+1490737490 e:\v2x_platform\display.h
+
+1490738352 source:e:\v2x_platform\base_create.cpp
+	"StdAfx.h"
+	"system_para.h"
+	"base_create.h"
+	"random.h"
+	<iostream>
+	<fstream>
+
+1490738362 e:\v2x_platform\base_create.h
+	<utility>
+	<vector>
+	"base_info.h"
+	"scenario_para.h"
+
+1490737490 e:\v2x_platform\base_info.h
+	<list>
+	<utility>
+	<iostream>
+	"scenario_para.h"
+	"system_para.h"
+
+1490737490 e:\v2x_platform\random.h
+	<stdlib.h>
+
+1490734430 source:e:\v2x_platform\base_info.cpp
+	"stdafx.h"
+	"base_info.h"
+	"system_para.h"
+
+1490736986 source:e:\v2x_platform\simulation.cpp
+	"stdafx.h"
+	"simulation.h"
+	"global_para.h"
+
+1490843166 e:\v2x_platform\simulation.h
+	"base_info.h"
+	"mt_info.h"
+	"scenario_para.h"
+	<vector>
+	<list>
+
+1490737490 e:\v2x_platform\global_para.h
+
+1490843156 source:e:\v2x_platform\mt_create.cpp
+	"stdafx.h"
+	"mt_create.h"
+	"base_create.h"
+	"system_para.h"
+	<utility>
+	<stdlib.h>
+	<fstream>
+
+1490843050 e:\v2x_platform\mt_create.h
+	"base_create.h"
+	"MT_INFO.h"
+	"scenario_para.h"
+	<utility>
+
+1490842438 e:\v2x_platform\mt_info.h
+	"system_para.h"
+	"scenario_para.h"
+	<utility>
+
+1490841566 source:e:\v2x_platform\mt_info.cpp
+	"StdAfx.h"
+	"mt_info.h"
+	"scenario_para.h"
+
+1490922113 source:g:\v2x_platform\base_create.cpp
+	"stdafx.h"
+	"system_para.h"
+	"base_create.h"
+	"random.h"
+	<iostream>
+	<fstream>
+
+1490737490 g:\v2x_platform\stdafx.h
+
+1490839802 g:\v2x_platform\system_para.h
+	"stdafx.h"
+	<math.h>
+
+1490738362 g:\v2x_platform\base_create.h
+	<utility>
+	<vector>
+	"base_info.h"
+	"scenario_para.h"
+
+1490737490 g:\v2x_platform\base_info.h
+	<list>
+	<utility>
+	<iostream>
+	"scenario_para.h"
+	"system_para.h"
+
+1490950266 g:\v2x_platform\scenario_para.h
+	"stdafx.h"
+	"system_para.h"
+
+1490737490 g:\v2x_platform\random.h
+	<stdlib.h>
+
+1490950125 source:g:\v2x_platform\base_info.cpp
+	"stdafx.h"
+	"base_info.h"
+	"system_para.h"
+	"extern.h"
+
+1490720724 source:g:\v2x_platform\display.cpp
+	<iostream>
+	"display.h"
+
+1490737490 g:\v2x_platform\display.h
+
+1490955619 source:g:\v2x_platform\main.cpp
+	<iostream>
+	<stdlib.h>
+	<list>
+	"scenario_para.h"
+	"simulation.h"
+	"base_create.h"
+	"mt_create.h"
+	"mt2mtgain_cac.h"
+	"global_para.h"
+
+1490955595 g:\v2x_platform\simulation.h
+	"base_info.h"
+	"mt_info.h"
+	"scenario_para.h"
+	<vector>
+	<list>
+	<unordered_set>
+	<unordered_map>
+	"extern.h"
+
+1490943251 g:\v2x_platform\mt_info.h
+	"system_para.h"
+	"scenario_para.h"
+	"gain_info.h"
+	<unordered_set>
+	<utility>
+
+1490843050 g:\v2x_platform\mt_create.h
+	"base_create.h"
+	"MT_INFO.h"
+	"scenario_para.h"
+	<utility>
+
+1490955487 source:g:\v2x_platform\mt_create.cpp
+	"stdafx.h"
+	"mt_create.h"
+	"base_create.h"
+	"system_para.h"
+	<utility>
+	<stdlib.h>
+	<fstream>
+
+1490841566 source:g:\v2x_platform\mt_info.cpp
+	"StdAfx.h"
+	"mt_info.h"
+	"scenario_para.h"
+
+1490835754 source:g:\v2x_platform\scenario_para.cpp
+	"scenario_para.h"
+
+1490945429 source:g:\v2x_platform\simulation.cpp
+	"stdafx.h"
+	"simulation.h"
+	"system_para.h"
+
+1490949828 g:\v2x_platform\global_para.h
+
+1490943298 source:g:\v2x_platform\gain_info.cpp
+	"system_para.h"
+	"scenario_para.h"
+	"gain_info.h"
+
+1490943290 g:\v2x_platform\gain_info.h
+	"system_para.h"
+	<utility>
+
+1490950139 source:g:\v2x_platform\mt2mtgain_cac.cpp
+	"stdafx.h"
+	"mt2mtgain_cac.h"
+	"system_para.h"
+	"gain_info.h"
+	<utility>
+	<fstream>
+	<stdlib.h>
+	"extern.h"
+
+1490950160 g:\v2x_platform\mt2mtgain_cac.h
+	"scenario_para.h"
+	"simulation.h"
+	"extern.h"
+
+1490950160 source:g:\v2x_platform\mt2mtgain_cac.h
+	"scenario_para.h"
+	"simulation.h"
+	"extern.h"
+
+1490949828 g:\v2x_platform\extern.h
+	"system_Para.h"
+

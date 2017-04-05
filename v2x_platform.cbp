@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="v2x_platform" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/v2x_platform" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/v2x_platform" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="base_create.cpp" />
+		<Unit filename="base_create.h" />
+		<Unit filename="base_info.cpp" />
+		<Unit filename="base_info.h" />
+		<Unit filename="display.cpp" />
+		<Unit filename="display.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="extern.h" />
+		<Unit filename="gain_info.cpp" />
+		<Unit filename="gain_info.h" />
+		<Unit filename="global_para.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mt2mtgain_cac.cpp" />
+		<Unit filename="mt2mtgain_cac.h">
+			<Option compile="1" />
+		</Unit>
+		<Unit filename="mt_create.cpp" />
+		<Unit filename="mt_create.h" />
+		<Unit filename="mt_info.cpp" />
+		<Unit filename="mt_info.h" />
+		<Unit filename="random.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="scenario_para.cpp" />
+		<Unit filename="scenario_para.h" />
+		<Unit filename="simulation.cpp" />
+		<Unit filename="simulation.h" />
+		<Unit filename="stdafx.h" />
+		<Unit filename="system_para.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
