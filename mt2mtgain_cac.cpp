@@ -28,16 +28,10 @@ void  MT2MTGAIN_CAC::Cac_pathloss(list<MT_INFO*> &mt_list)                     /
 
 	int LoS_flag;
 
-	std::ofstream OUT_Cl_Info("result/coupling_loss.txt",ios::out|ios::trunc);
-
-	GAIN_INFO *pgain = NULL;
-	GAIN_INFO *pgain2 = NULL;
+	//std::ofstream OUT_Cl_Info("result/coupling_loss.txt",ios::out|ios::trunc);
 
 	list<MT_INFO*>::iterator mt_ptr;
 	list<MT_INFO*>::iterator mt_ptr2;
-
-
-
 
 	for(mt_ptr = mt_list.begin();mt_ptr!=mt_list.end();mt_ptr++)
 	{
@@ -64,7 +58,8 @@ void  MT2MTGAIN_CAC::Cac_pathloss(list<MT_INFO*> &mt_list)                     /
 
             if(mt2mt_dist<=320.0)
 
-            {//LoS_flag = Decide_LoSflag(mt2mt_dist);//此链路为LoS的概率,对UMi为室外部分的LoS的概率
+            {
+                //LoS_flag = Decide_LoSflag(mt2mt_dist);//此链路为LoS的概率,对UMi为室外部分的LoS的概率
 
                 LoS_flag =0;
 
@@ -75,35 +70,30 @@ void  MT2MTGAIN_CAC::Cac_pathloss(list<MT_INFO*> &mt_list)                     /
                 GAIN_INFO*temp1=new GAIN_INFO(mt_id,mt_id2);
                 GAIN_INFO*temp2=new GAIN_INFO(mt_id2,mt_id);
 
-                pgain = temp1;
-                pgain2 = temp2;
+                temp1->LOS_flag = LoS_flag;
+                temp2->LOS_flag = LoS_flag;
 
-                (*mt_ptr)->comm_mt.insert(temp1);
-                (*mt_ptr2)->comm_mt.insert(temp2);
+                temp1->pathloss_dB = dist_loss;
+                temp2->pathloss_dB = dist_loss;
 
-                pgain->LOS_flag = LoS_flag;
-                pgain2->LOS_flag = LoS_flag;
+                temp1->coupling_loss=temp1->pathloss_dB-3;
+                temp2->coupling_loss=temp2->pathloss_dB-3;
 
-                pgain->pathloss_dB = dist_loss;
-                pgain2->pathloss_dB = dist_loss;
+                temp1->pathloss = pow((double)10.0,(temp1->pathloss_dB/10.0));
+                temp2->pathloss = pow((double)10.0,(temp2->pathloss_dB/10.0));
 
-                pgain->coupling_loss=pgain->pathloss_dB-3;
-                pgain->coupling_loss=pgain->pathloss_dB-3;
+                (*mt_ptr)->comm_mt_list.push_back(temp1);
+                (*mt_ptr2)->comm_mt_list.push_back(temp2);
 
-
-                pgain->pathloss = pow((double)10.0,(pgain->pathloss_dB/10.0));
-                pgain2->pathloss = pow((double)10.0,(pgain->pathloss_dB/10.0));
-
-                delete temp1;
-                delete temp2;
-
-                OUT_Cl_Info<<pgain->coupling_loss<<"\n";
             }
 
         }
-
+        //OUT_Cl_Info<<(*mt_ptr)->comm_mt_list.size()<<"\t"<<mt_id<<endl;
 	}
+
 }
+
+
 double MT2MTGAIN_CAC::Cac_distloss(bool LoSflag,double mt2mt_dist)
 {
     double dist_loss=0;
@@ -131,20 +121,31 @@ double MT2MTGAIN_CAC::Cac_distloss(bool LoSflag,double mt2mt_dist)
 	return dist_loss;
 }
 
-void MT2MTGAIN_CAC::store_gain(list<MT_INFO*> &mt_list,unordered_map<int,unordered_set<GAIN_INFO*>>&carrier)
+void MT2MTGAIN_CAC::store_gain(list<MT_INFO*> &mt_list,unordered_map<int,vector<GAIN_INFO*>>&carrier)
 {
     list<MT_INFO*>::iterator mt_ptr;
-
+    //::ofstream test("result/test.txt",ios::out|ios::trunc);
+    //std::ofstream test1("result/test1.txt",ios::out|ios::trunc);
     int carrier_temp;
 
+    for(int i=0;i<600;i++)
+    {
+        carrier[i].clear();
+    }
     for(mt_ptr=mt_list.begin();mt_ptr!=mt_list.end();mt_ptr++)
     {
 
-        for(auto mt_tocomm=(*mt_ptr)->comm_mt.begin();mt_tocomm!=(*mt_ptr)->comm_mt.end();mt_tocomm++)
+        for(auto mt_tocomm=(*mt_ptr)->comm_mt_list.begin();mt_tocomm!=(*mt_ptr)->comm_mt_list.end();mt_tocomm++)
         {
             carrier_temp=rand()%sys_realsubnum;
-            carrier[carrier_temp].insert(*mt_tocomm);
+            if(carrier.find(carrier_temp)==carrier.end())
+            {
+                carrier[carrier_temp]={*mt_tocomm};
+            }
+            else
+            carrier[carrier_temp].push_back(*mt_tocomm);
         }
     }
+
 }
 

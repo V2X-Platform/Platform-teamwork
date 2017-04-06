@@ -61,5 +61,7 @@ const double    sys_min_dist = 35;
 const double    sys_H_BS = 5;                                            // 基站天线高度
 const double    sys_H_MT = 1.5;                                          // 用户天线高度
 const double    sys_MT_vmean = 70;                                       // 用户移动速度
+const double    sys_MT_Power=23.0;                                        // 用户发射功率
+const double    sys_BS_Power=46.0;                                         // 基站发射功率
 
 #endif // SYSTEM_H_INCLUDED

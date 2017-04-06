@@ -33,7 +33,7 @@ public:
 
     vector<BASE_INFO*> base_list;                            //基站列表
     list <MT_INFO*> mt_list;                                 //用户列表
-    unordered_map<int,unordered_set<GAIN_INFO*>>  carrier;     //业务列表
+    unordered_map<int,vector<GAIN_INFO*>>  carrier;          //业务列表
 
     SIMULATION(SCENARIO_PARA &scenario_data);
 	~SIMULATION();

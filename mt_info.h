@@ -7,6 +7,7 @@
 #include "gain_info.h"
 #include <unordered_set>
 #include <utility>
+#include <vector>
 using namespace std;
 
 class MT_INFO
@@ -33,6 +34,8 @@ public:
 	int line_id;                            //当前道路数目
 
 	unordered_set<GAIN_INFO*> comm_mt;
+
+	vector<GAIN_INFO*> comm_mt_list;
 
 public:
 

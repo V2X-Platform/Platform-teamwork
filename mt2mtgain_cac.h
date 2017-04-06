@@ -24,7 +24,7 @@ public:
 
 	void Cac_pathloss(list<MT_INFO*> &mt_list);
     double Cac_distloss(bool LoSflag,double mt2mt_dist);
-    void store_gain(list<MT_INFO*> &mt_list,unordered_map<int,unordered_set<GAIN_INFO*>>&carrier);   //存储两个用户之间的相关通信信息；
+    void store_gain(list<MT_INFO*> &mt_list,unordered_map<int,vector<GAIN_INFO*>>&carrier);   //存储两个用户之间的相关通信信息；
 
 };
 
