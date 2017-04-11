@@ -7,6 +7,8 @@
 #include <iostream>
 #include "scenario_para.h"
 #include "system_para.h"
+#include "gain_info.h"
+#include <vector>
 
 using namespace std;
 
@@ -17,16 +19,11 @@ public:
     int RBnum;
     int base_id;
 
-    //list < MT_INFO*>  linkmt_list;           //链接的用户列表
-    //list < MT_INFO*>  LoS_mtlist;             //视距用户列表
-	//list < MT_INFO*>  NLoS_mtlist;            //非视距用户列表
-
-	//ANT_INFO** ANT_list;                      //天线裂变
-	//RUNIT_INFO** base_resource;               //基站资源
-
     double BS_array_broadside;//天线阵列的垂直方向角，范围[180,180)
     pair <double,double> *ant_pos;			//the base ants' position
+    pair <double,double>  base_pos;			//the base ants' position
     double *Theta;//扇区天线相对x正半轴的夹角，范围[180,180)
+    vector<GAIN_INFO*> comm_mt_list;
 
 
 

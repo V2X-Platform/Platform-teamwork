@@ -43,14 +43,12 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="extern.h" />
+		<Unit filename="gain_cac.cpp" />
+		<Unit filename="gain_cac.h" />
 		<Unit filename="gain_info.cpp" />
 		<Unit filename="gain_info.h" />
 		<Unit filename="global_para.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="mt2mtgain_cac.cpp" />
-		<Unit filename="mt2mtgain_cac.h">
-			<Option compile="1" />
-		</Unit>
 		<Unit filename="mt_create.cpp" />
 		<Unit filename="mt_create.h" />
 		<Unit filename="mt_info.cpp" />
@@ -64,8 +62,8 @@
 		<Unit filename="simulation.h" />
 		<Unit filename="stdafx.h" />
 		<Unit filename="system_para.h" />
-		<Unit filename="transinfo_cac.cpp" />
-		<Unit filename="transinfo_cac.h" />
+		<Unit filename="tbinfo_cac.cpp" />
+		<Unit filename="tbinfo_cac.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

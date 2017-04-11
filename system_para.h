@@ -5,6 +5,8 @@
 #pragma once
 #include "stdafx.h"
 #include <math.h>
+#include <utility>
+using namespace std;
 
 const int       non_statistic_time = 200;//ms,这里认为200个TTI之后系统已经步入稳态（之前可能是非稳态），因此不统计前200个TTI（200应该是足够的，具体最合适的数值跟调度窗口的大小有关）
 
@@ -61,7 +63,9 @@ const double    sys_min_dist = 35;
 const double    sys_H_BS = 5;                                            // 基站天线高度
 const double    sys_H_MT = 1.5;                                          // 用户天线高度
 const double    sys_MT_vmean = 70;                                       // 用户移动速度
-const double    sys_MT_Power=23.0;                                        // 用户发射功率
-const double    sys_BS_Power=46.0;                                         // 基站发射功率
+const double    sys_MT_Power=23.0;                                       // 用户发射功率
+const double    sys_BS_Power=46.0;                                       // 基站发射功率
+
+const pair<double,double> sys_base_vect[2]={{sys_ISD/2,0.0},{sys_ISD/2,0.0}};       // 基站位置
 
 #endif // SYSTEM_H_INCLUDED

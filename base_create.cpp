@@ -18,8 +18,6 @@ BASE_CREATE::BASE_CREATE(SCENARIO_PARA scenario_data)
 	//area_vect = new complex<double>[area_num];                    //城市模型中再启用
 	site_vect = new pair<double,double>[basenum];
 
-    site_vect[0] = {ISD/2,0.0};                     //两个基站的位置
-    site_vect[1] = {-ISD/2,0.0};                    //两个基站的位置
 }
 
 /*析构函数*/
