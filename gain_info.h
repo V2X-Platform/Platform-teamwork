@@ -1,7 +1,6 @@
 #ifndef GAIN_INFO_H_INCLUDED
 #define GAIN_INFO_H_INCLUDED
 
-#pragma once
 #include "system_para.h"
 #include <utility>
 
@@ -21,11 +20,22 @@ public:
 
 	double pathloss_dB;
 
-	double coupling_loss;
+	double Antenna_Gain;
+
+	double delay;
 
 	bool LOS_flag;
 
+	bool bs2mt_flag;
+
 	pair<int,int> dis_vect;
+
+	double Atotal;
+
+	double Phi_AOA;
+
+	double phi_AOS;
+
 
 public:
 

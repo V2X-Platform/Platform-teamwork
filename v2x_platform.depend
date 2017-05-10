@@ -95,7 +95,7 @@
 	"mt_info.h"
 	"scenario_para.h"
 
-1490922113 source:g:\v2x_platform\base_create.cpp
+1494424249 source:g:\v2x_platform\base_create.cpp
 	"stdafx.h"
 	"system_para.h"
 	"base_create.h"
@@ -103,33 +103,38 @@
 	<iostream>
 	<fstream>
 
-1490737490 g:\v2x_platform\stdafx.h
+1494214861 g:\v2x_platform\stdafx.h
 
-1491464969 g:\v2x_platform\system_para.h
+1494214924 g:\v2x_platform\system_para.h
 	"stdafx.h"
 	<math.h>
+	<utility>
 
-1490738362 g:\v2x_platform\base_create.h
+1494298215 g:\v2x_platform\base_create.h
 	<utility>
 	<vector>
 	"base_info.h"
 	"scenario_para.h"
 
-1490737490 g:\v2x_platform\base_info.h
+1494345326 g:\v2x_platform\base_info.h
 	<list>
 	<utility>
 	<iostream>
 	"scenario_para.h"
 	"system_para.h"
+	"gain_info.h"
+	<vector>
 
-1490950266 g:\v2x_platform\scenario_para.h
+1494260377 g:\v2x_platform\scenario_para.h
 	"stdafx.h"
 	"system_para.h"
+	<utility>
 
-1490737490 g:\v2x_platform\random.h
+1493947079 g:\v2x_platform\random.h
 	<stdlib.h>
+	<math.h>
 
-1490950125 source:g:\v2x_platform\base_info.cpp
+1494345326 source:g:\v2x_platform\base_info.cpp
 	"stdafx.h"
 	"base_info.h"
 	"system_para.h"
@@ -141,7 +146,7 @@
 
 1490737490 g:\v2x_platform\display.h
 
-1491402859 source:g:\v2x_platform\main.cpp
+1494427683 source:g:\v2x_platform\main.cpp
 	<iostream>
 	<stdlib.h>
 	<list>
@@ -149,11 +154,13 @@
 	"simulation.h"
 	"base_create.h"
 	"mt_create.h"
-	"mt2mtgain_cac.h"
+	"gain_cac.h"
 	"global_para.h"
-	"transinfo_cac.h"
+	"tbinfo_cac.h"
+	"display.h"
+	"random.h"
 
-1491460785 g:\v2x_platform\simulation.h
+1494380342 g:\v2x_platform\simulation.h
 	"base_info.h"
 	"mt_info.h"
 	"scenario_para.h"
@@ -163,7 +170,7 @@
 	<unordered_map>
 	"extern.h"
 
-1491459578 g:\v2x_platform\mt_info.h
+1494345374 g:\v2x_platform\mt_info.h
 	"system_para.h"
 	"scenario_para.h"
 	"gain_info.h"
@@ -171,13 +178,13 @@
 	<utility>
 	<vector>
 
-1490843050 g:\v2x_platform\mt_create.h
+1493910042 g:\v2x_platform\mt_create.h
 	"base_create.h"
 	"MT_INFO.h"
 	"scenario_para.h"
 	<utility>
 
-1490955487 source:g:\v2x_platform\mt_create.cpp
+1494400995 source:g:\v2x_platform\mt_create.cpp
 	"stdafx.h"
 	"mt_create.h"
 	"base_create.h"
@@ -185,28 +192,33 @@
 	<utility>
 	<stdlib.h>
 	<fstream>
+	"random.h"
+	<time.h>
 
-1490841566 source:g:\v2x_platform\mt_info.cpp
+1494345374 source:g:\v2x_platform\mt_info.cpp
 	"StdAfx.h"
 	"mt_info.h"
 	"scenario_para.h"
 
-1490835754 source:g:\v2x_platform\scenario_para.cpp
+1494429912 source:g:\v2x_platform\scenario_para.cpp
 	"scenario_para.h"
+	<iostream>
+	<fstream>
+	<math.h>
 
-1491441645 source:g:\v2x_platform\simulation.cpp
+1494424249 source:g:\v2x_platform\simulation.cpp
 	"stdafx.h"
 	"simulation.h"
 	"system_para.h"
 
 1490949828 g:\v2x_platform\global_para.h
 
-1490943298 source:g:\v2x_platform\gain_info.cpp
+1494404613 source:g:\v2x_platform\gain_info.cpp
 	"system_para.h"
 	"scenario_para.h"
 	"gain_info.h"
 
-1490943290 g:\v2x_platform\gain_info.h
+1494404613 g:\v2x_platform\gain_info.h
 	"system_para.h"
 	<utility>
 
@@ -446,4 +458,47 @@
 	"system_para.h"
 	"extern.h"
 	<stdlib.h>
+
+1494428224 source:g:\v2x_platform\gain_cac.cpp
+	"stdafx.h"
+	"gain_cac.h"
+	"system_para.h"
+	"gain_info.h"
+	<utility>
+	<fstream>
+	<stdlib.h>
+	"extern.h"
+	"random.h"
+	"scenario_para.h"
+	"tools.h"
+	"math.h"
+
+1494381739 g:\v2x_platform\gain_cac.h
+	"scenario_para.h"
+	"simulation.h"
+	"extern.h"
+
+1493910479 g:\v2x_platform\tbinfo_cac.h
+	"mt_info.h"
+	"simulation.h"
+	"bler_curve.h"
+	"scenario_para.h"
+
+1494430423 source:g:\v2x_platform\tbinfo_cac.cpp
+	"stdafx.h"
+	"tbinfo_cac.h"
+	"system_para.h"
+	"extern.h"
+	<stdlib.h>
+
+1494400605 source:g:\v2x_platform\random.cpp
+	"random.h"
+
+1494343824 g:\v2x_platform\tools.h
+	<utility>
+	<math.h>
+
+1494346212 source:g:\v2x_platform\tools.cpp
+	"tools.h"
+	"stdafx.h"
 

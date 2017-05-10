@@ -18,17 +18,21 @@ public:
     int antnum;
     int RBnum;
     int base_id;
+    int antnum_pBS;
+    int MT_num;
 
     double BS_array_broadside;//天线阵列的垂直方向角，范围[180,180)
-    pair <double,double> *ant_pos;			//the base ants' position
-    pair <double,double>  base_pos;			//the base ants' position
     double *Theta;//扇区天线相对x正半轴的夹角，范围[180,180)
+
+    pair <double,double> *ant_pos;			//the base ants' position
+    pair <double,double> base_pos;			//the base ants' position
     vector<GAIN_INFO*> comm_mt_list;
 
 
 
 public:
-    BASE_INFO(SCENARIO_PARA scenario_data,int baseid,pair<double,double> *antpos,double *theta,double array_broadside);
+    BASE_INFO(SCENARIO scenario_data,int baseid,pair<double,double> *antpos,double *theta,double array_broadside);
+    BASE_INFO();
     ~BASE_INFO(void);
 };
 

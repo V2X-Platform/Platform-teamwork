@@ -35,7 +35,8 @@ public:
     list <MT_INFO*> mt_list;                                 //用户列表
     unordered_map<int,vector<GAIN_INFO*>>  carrier;          //业务列表
 
-    SIMULATION(SCENARIO_PARA &scenario_data);
+    SIMULATION(SCENARIO scenario_data);
+    SIMULATION(const SIMULATION&_A);
 	~SIMULATION();
 };
 

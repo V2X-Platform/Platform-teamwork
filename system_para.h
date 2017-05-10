@@ -25,16 +25,6 @@ const double    sys_subframe_time = 0.001;//1 ms
 const double	sys_tstep = sys_subframe_time*SubFrame_num;		// Simulation time step
 
 
-// -------------Base and MT configuration related parameters---------------
-
-const double    BS_noise_fig = 5.0; // 基站的噪声指数，dB为单位
-const double    BS_recv_noise = pow((double)10.0,BS_noise_fig/10.0);               //基站的接收噪声
-const double    BS_feeder_loss = 2.0;//---------------------------------------2.0; // 一个补偿噪声，没用的话以后就删除了
-
-const double    MT_noise_fig = 7.0; // 用户的噪声指数，dB为单位
-const double    MT_recv_noise = pow((double)10.0,MT_noise_fig/10.0);
-
-const int       sys_cell_mtnum = 100;  //待考察的变量
 
 // Subcarrier information	20MHz bandwidth -- 100RB -- 44dBm
 const int       sys_bindnum = 12;                                       // system binding group subcarrier number
@@ -46,26 +36,16 @@ const int		sys_sym_num = 7*20;                                     // 没用就删。
 
 const double	sys_frequency=6e9;	                                    // 系统频段System main Carrier frequency in Hz
 const double    sys_BW=10e6;                                            // 系统带宽
-const int       sys_sectnum_pBS=1;                                      // 每个基站扇区数目
-const int		sys_antnum_pBS=1;         		                        // 每个基站的天线数量
-const int		sys_basenum=2;			                                // 基站数目
 
-//车道信息
-const int       MT_perline=50;                                          // 车道内车辆数目
-const int       Line_nums=6;                                            // 车道数目
-const int       MT_num=MT_perline*Line_nums;                            // 用户总数
 
-const double    sys_ISD = 1732;                                          // 基站间间距
-const double	sys_BS_Txpower = 23;                                     // BS发射功率(dBm)
-const double    sys_BS_antgain = 3;                                      // dBi天线增益
-const double    sys_MT_antgain = 0.0;                                    // dBi用户增益
-const double    sys_min_dist = 35;
-const double    sys_H_BS = 5;                                            // 基站天线高度
-const double    sys_H_MT = 1.5;                                          // 用户天线高度
-const double    sys_MT_vmean = 70;                                       // 用户移动速度
-const double    sys_MT_Power=23.0;                                       // 用户发射功率
-const double    sys_BS_Power=46.0;                                       // 基站发射功率
+//system antenna gain information, see r1-091320 - ITU test environments.doc in detail
+const double    sys_theta3dB = 70.0;             //3dB增益对应的水平夹角单位为°
+const double    sys_Am = 20.0;					 //最大增益
+const double    sys_phi_tilt[5] = {0,12.0,12.0,6.0,6.0};             //UMi UMa场景下天下垂直倾角
+const double    sys_phi_3dB = 15.0;				// 3dB增益对应的垂直夹角单位为°
 
-const pair<double,double> sys_base_vect[2]={{sys_ISD/2,0.0},{sys_ISD/2,0.0}};       // 基站位置
+const double    Phi_tilt = sys_phi_tilt[1];           // Antenna Pattern中的垂直下倾角
+
+const bool      MT_omni = 1;
 
 #endif // SYSTEM_H_INCLUDED

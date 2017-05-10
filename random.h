@@ -3,12 +3,13 @@
 
 
 #include <stdlib.h>
+#include <math.h>
 
-double random_0to1()
-{
-    unsigned uSeed = 453676;
-    srand(uSeed);
-    return rand()%(999+1)/(double)(1000);
-}
+
+double random_0to1();//0~1均匀分布
+
+double gaussrand(double V,double E);//高斯分布，E是期望，V是方差
+
+
 
 #endif // RANDOM_H_INCLUDED

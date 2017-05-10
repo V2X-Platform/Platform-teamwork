@@ -8,5 +8,7 @@ MT_INFO::MT_INFO(int id)
 	mt_id = id;
 }
 
+MT_INFO::MT_INFO(){}
+
 MT_INFO::~MT_INFO(void){}
 

@@ -15,9 +15,12 @@ GAIN_INFO::GAIN_INFO(int s_id,int t_id)
 
     pathloss = FALSE_VALUE;
 
-    coupling_loss=FALSE_VALUE;
+    Antenna_Gain=FALSE_VALUE;
 
     pathloss_dB = 0;
+
+    bs2mt_flag=0;
+
 
 }
 

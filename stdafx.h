@@ -17,6 +17,6 @@
 #define     LoS           0
 #define     NLoS          1
 
-#define    Res_Allocation_type
+#define     Res_Allocation_type
 
 #endif // STDAFX_H_INCLUDED

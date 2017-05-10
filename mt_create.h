@@ -29,7 +29,7 @@ public:
 
 public:
 
-	MT_CREATE(pair<double,double> sitevect[]);
+	MT_CREATE(SCENARIO scenario);
 
 	~MT_CREATE(void);
 

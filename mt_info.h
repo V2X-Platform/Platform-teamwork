@@ -33,6 +33,9 @@ public:
 
 	int line_id;                            //当前道路数目
 
+	double arrarray_direction;                  //天线朝向
+
+
 	unordered_set<GAIN_INFO*> comm_mt;
 
 	vector<GAIN_INFO*> comm_mt_list;
@@ -40,6 +43,7 @@ public:
 public:
 
 	MT_INFO(int id);
+	MT_INFO();
 
 	~MT_INFO(void);
 

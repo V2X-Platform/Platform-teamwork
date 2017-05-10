@@ -53,6 +53,7 @@
 		<Unit filename="mt_create.h" />
 		<Unit filename="mt_info.cpp" />
 		<Unit filename="mt_info.h" />
+		<Unit filename="random.cpp" />
 		<Unit filename="random.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -64,6 +65,8 @@
 		<Unit filename="system_para.h" />
 		<Unit filename="tbinfo_cac.cpp" />
 		<Unit filename="tbinfo_cac.h" />
+		<Unit filename="tools.cpp" />
+		<Unit filename="tools.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
