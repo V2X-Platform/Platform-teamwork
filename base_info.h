@@ -15,6 +15,7 @@ using namespace std;
 class BASE_INFO
 {
 public:
+
     int antnum;
     int RBnum;
     int base_id;
@@ -28,10 +29,45 @@ public:
     pair <double,double> base_pos;			//the base ants' position
     vector<GAIN_INFO*> comm_mt_list;
 
+	double* ant_sendpacketnum;			// ant send packet number
 
+	double* ant_sendblocknum;			// ant send block number
+
+	double* ant_sendbitnum;				// ant send bit number
+
+	//RUNIT_INFO** base_resource;			// the resource unit in the base station
+
+	double sendpacket_num;				// send packet number
+
+	double sendblock_num;				// the send block number;
+
+	double sendbit_num;					// the send bit number
+
+	double discardpacket_num;				// drop packet number
+
+	double discardbit_num;					// the drop bit number
 
 public:
     BASE_INFO(SCENARIO scenario_data,int baseid,pair<double,double> *antpos,double *theta,double array_broadside);
+
+    void Sending_data(double simultime);
+
+    double Get_sendpacketnum();
+
+	double Get_antsendpacketnum(int ant_index);
+
+	double Get_sendblocknum();
+
+	double Get_antsendblocknum(int ant_index);
+
+	double Get_sendbitnum();
+
+	double Get_antsendbitnum(int ant_index);
+
+	double Get_discardpacketnum();
+
+	double Get_discardbitnum();
+
     BASE_INFO();
     ~BASE_INFO(void);
 };

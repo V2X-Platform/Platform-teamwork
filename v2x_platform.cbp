@@ -32,6 +32,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="DataStatistic.cpp" />
+		<Unit filename="DataStatistic.h" />
+		<Unit filename="HarqBuffer.h" />
+		<Unit filename="TbLock.cpp" />
+		<Unit filename="TbLock.h" />
 		<Unit filename="base_create.cpp" />
 		<Unit filename="base_create.h" />
 		<Unit filename="base_info.cpp" />

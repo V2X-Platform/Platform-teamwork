@@ -197,8 +197,6 @@ void  MT2MTGAIN_CAC::Cac_pathloss(vector<BASE_INFO*>&base_list,list <MT_INFO*>&m
             mt_posy2=(*mt_ptr2)->y_sort;
             mt_id2=(*mt_ptr2)->mt_id;
 
-            mt2mt_dist=(mt_posx-mt_posx2);
-
             mt2mt_dist_horizon = abs(mt_posx-mt_posx2);//水平距离
 
             mt2mt_dist_vertical = abs(mt_posy-mt_posy2);//空间距离
@@ -216,7 +214,6 @@ void  MT2MTGAIN_CAC::Cac_pathloss(vector<BASE_INFO*>&base_list,list <MT_INFO*>&m
                 theta = 0.0;  //用户天线是全向性的，和角度无关，所以暂时只写0.0,留个计算接口，若以后需要可以添加
 
                 phi = 0.0;    //用户天线是全向性的，和角度无关，所以暂时只写0.0,留个计算接口，若以后需要可以添加
-
 
                 //Set_LoSflag(base_list[base_index],*mt_ptr,LoS_flag,mt_Indoor); 这行还有用，不过暂时不知道怎么利用
 
@@ -396,9 +393,10 @@ void MT2MTGAIN_CAC::store_gain(list<MT_INFO*> &mt_list,unordered_map<int,vector<
 
     int carrier_temp;
 
-    for(int i=0;i<600;i++)
+    for(int i=0;i<sys_realsubnum;i++)
     {
         carrier[i].clear();
+
     }
     for(mt_ptr=mt_list.begin();mt_ptr!=mt_list.end();mt_ptr++)
     {

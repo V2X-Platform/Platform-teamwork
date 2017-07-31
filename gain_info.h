@@ -14,11 +14,13 @@ public:
 
     int target_id;
 
-	double distloss;
+	double distloss;//对数值
 
 	double pathloss;
 
 	double pathloss_dB;
+
+	double Atotal;  //对数值
 
 	double Antenna_Gain;
 
@@ -30,11 +32,13 @@ public:
 
 	pair<int,int> dis_vect;
 
-	double Atotal;
+	//double Atotal;
 
 	double Phi_AOA;
 
 	double phi_AOS;
+
+	double PacketSize;
 
 
 public:

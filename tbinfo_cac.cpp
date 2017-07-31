@@ -105,6 +105,7 @@ void MT2MT_TB::Cac_Tbinfo(list<MT_INFO*> &mt_list,unordered_map<int,vector<GAIN_
                     if(Cac_Bler(bler_data,sys_RBnum,sinr))
                     {
                        success[send_id]=success[send_id]+1;
+                       (*carrier_ptr)->PacketSize = 100.0;
                     }
                 }
                 else
@@ -124,7 +125,7 @@ void MT2MT_TB::Cac_Tbinfo(list<MT_INFO*> &mt_list,unordered_map<int,vector<GAIN_
        SUCCESS_RATE<<success_rate<<"\t"<<send_id<<endl;
    }
 
-    for(int id=300;id<302;id++)
+    for(int id=300 ;id<302;id++)
    {
        success_rate=(double)success[id]/300;
        SUCCESS_RATE<<success_rate<<"\t"<<id<<endl;

@@ -19,7 +19,9 @@ GAIN_INFO::GAIN_INFO(int s_id,int t_id)
 
     pathloss_dB = 0;
 
-    bs2mt_flag=0;
+    bs2mt_flag = 0;
+
+    PacketSize = 0.0;
 
 
 }

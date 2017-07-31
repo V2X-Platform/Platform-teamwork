@@ -275,13 +275,13 @@
 	<stdio.h>
 	<fstream>
 
-1490737490 c:\users\yty\desktop\platform-teamwork\stdafx.h
+1494214861 c:\users\yty\desktop\platform-teamwork\stdafx.h
 
 1491402486 c:\users\yty\desktop\platform-teamwork\bler_curve.h
 	<iostream>
 	<fstream>
 
-1491837997 c:\users\yty\desktop\platform-teamwork\system_para.h
+1494214924 c:\users\yty\desktop\platform-teamwork\system_para.h
 	"stdafx.h"
 	<math.h>
 	<utility>
@@ -292,20 +292,21 @@
 
 1490737490 c:\users\yty\desktop\platform-teamwork\display.h
 
-1490943298 source:c:\users\yty\desktop\platform-teamwork\gain_info.cpp
+1494404613 source:c:\users\yty\desktop\platform-teamwork\gain_info.cpp
 	"system_para.h"
 	"scenario_para.h"
 	"gain_info.h"
 
-1490950266 c:\users\yty\desktop\platform-teamwork\scenario_para.h
+1494260377 c:\users\yty\desktop\platform-teamwork\scenario_para.h
 	"stdafx.h"
-	"system_para.h"
-
-1490943290 c:\users\yty\desktop\platform-teamwork\gain_info.h
 	"system_para.h"
 	<utility>
 
-1491873142 source:c:\users\yty\desktop\platform-teamwork\main.cpp
+1501437252 c:\users\yty\desktop\platform-teamwork\gain_info.h
+	"system_para.h"
+	<utility>
+
+1494427683 source:c:\users\yty\desktop\platform-teamwork\main.cpp
 	<iostream>
 	<stdlib.h>
 	<list>
@@ -316,8 +317,10 @@
 	"gain_cac.h"
 	"global_para.h"
 	"tbinfo_cac.h"
+	"display.h"
+	"random.h"
 
-1491460785 c:\users\yty\desktop\platform-teamwork\simulation.h
+1494380342 c:\users\yty\desktop\platform-teamwork\simulation.h
 	"base_info.h"
 	"mt_info.h"
 	"scenario_para.h"
@@ -327,7 +330,7 @@
 	<unordered_map>
 	"extern.h"
 
-1491838963 c:\users\yty\desktop\platform-teamwork\base_info.h
+1501431244 c:\users\yty\desktop\platform-teamwork\base_info.h
 	<list>
 	<utility>
 	<iostream>
@@ -336,7 +339,7 @@
 	"gain_info.h"
 	<vector>
 
-1491459578 c:\users\yty\desktop\platform-teamwork\mt_info.h
+1501438091 c:\users\yty\desktop\platform-teamwork\mt_info.h
 	"system_para.h"
 	"scenario_para.h"
 	"gain_info.h"
@@ -347,13 +350,13 @@
 1490949828 c:\users\yty\desktop\platform-teamwork\extern.h
 	"system_Para.h"
 
-1490738362 c:\users\yty\desktop\platform-teamwork\base_create.h
+1494298215 c:\users\yty\desktop\platform-teamwork\base_create.h
 	<utility>
 	<vector>
 	"base_info.h"
 	"scenario_para.h"
 
-1490843050 c:\users\yty\desktop\platform-teamwork\mt_create.h
+1493910042 c:\users\yty\desktop\platform-teamwork\mt_create.h
 	"base_create.h"
 	"MT_INFO.h"
 	"scenario_para.h"
@@ -386,7 +389,7 @@
 	"simulation.h"
 	"extern.h"
 
-1490955487 source:c:\users\yty\desktop\platform-teamwork\mt_create.cpp
+1494400995 source:c:\users\yty\desktop\platform-teamwork\mt_create.cpp
 	"stdafx.h"
 	"mt_create.h"
 	"base_create.h"
@@ -394,21 +397,26 @@
 	<utility>
 	<stdlib.h>
 	<fstream>
+	"random.h"
+	<time.h>
 
-1490841566 source:c:\users\yty\desktop\platform-teamwork\mt_info.cpp
+1494345374 source:c:\users\yty\desktop\platform-teamwork\mt_info.cpp
 	"StdAfx.h"
 	"mt_info.h"
 	"scenario_para.h"
 
-1490835754 source:c:\users\yty\desktop\platform-teamwork\scenario_para.cpp
+1494429912 source:c:\users\yty\desktop\platform-teamwork\scenario_para.cpp
 	"scenario_para.h"
+	<iostream>
+	<fstream>
+	<math.h>
 
-1491441645 source:c:\users\yty\desktop\platform-teamwork\simulation.cpp
+1494424249 source:c:\users\yty\desktop\platform-teamwork\simulation.cpp
 	"stdafx.h"
 	"simulation.h"
 	"system_para.h"
 
-1491837590 source:c:\users\yty\desktop\platform-teamwork\base_create.cpp
+1494424249 source:c:\users\yty\desktop\platform-teamwork\base_create.cpp
 	"stdafx.h"
 	"system_para.h"
 	"base_create.h"
@@ -416,16 +424,17 @@
 	<iostream>
 	<fstream>
 
-1490737490 c:\users\yty\desktop\platform-teamwork\random.h
+1493947079 c:\users\yty\desktop\platform-teamwork\random.h
 	<stdlib.h>
+	<math.h>
 
-1491838093 source:c:\users\yty\desktop\platform-teamwork\base_info.cpp
+1494345326 source:c:\users\yty\desktop\platform-teamwork\base_info.cpp
 	"stdafx.h"
 	"base_info.h"
 	"system_para.h"
 	"extern.h"
 
-1491839819 source:c:\users\yty\desktop\platform-teamwork\gain_cac.cpp
+1494428224 source:c:\users\yty\desktop\platform-teamwork\gain_cac.cpp
 	"stdafx.h"
 	"gain_cac.h"
 	"system_para.h"
@@ -434,8 +443,12 @@
 	<fstream>
 	<stdlib.h>
 	"extern.h"
+	"random.h"
+	"scenario_para.h"
+	"tools.h"
+	"math.h"
 
-1491869988 c:\users\yty\desktop\platform-teamwork\gain_cac.h
+1494381739 c:\users\yty\desktop\platform-teamwork\gain_cac.h
 	"scenario_para.h"
 	"simulation.h"
 	"extern.h"
@@ -447,12 +460,13 @@
 	"extern.h"
 	<stdlib.h>
 
-1491873281 c:\users\yty\desktop\platform-teamwork\tbinfo_cac.h
+1493910479 c:\users\yty\desktop\platform-teamwork\tbinfo_cac.h
 	"mt_info.h"
 	"simulation.h"
 	"bler_curve.h"
+	"scenario_para.h"
 
-1491873538 source:c:\users\yty\desktop\platform-teamwork\tbinfo_cac.cpp
+1494430862 source:c:\users\yty\desktop\platform-teamwork\tbinfo_cac.cpp
 	"stdafx.h"
 	"tbinfo_cac.h"
 	"system_para.h"
@@ -499,6 +513,17 @@
 	<math.h>
 
 1494346212 source:g:\v2x_platform\tools.cpp
+	"tools.h"
+	"stdafx.h"
+
+1494343824 c:\users\yty\desktop\platform-teamwork\tools.h
+	<utility>
+	<math.h>
+
+1494400605 source:c:\users\yty\desktop\platform-teamwork\random.cpp
+	"random.h"
+
+1494346212 source:c:\users\yty\desktop\platform-teamwork\tools.cpp
 	"tools.h"
 	"stdafx.h"
 

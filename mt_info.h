@@ -33,7 +33,22 @@ public:
 
 	int line_id;                            //当前道路数目
 
-	double arrarray_direction;                  //天线朝向
+    double Tn;								// user average throughput in a lenght of time
+
+	double arrarray_direction;               //天线朝向
+
+    double DiscardPacketTotal;				//discard packet num
+
+	double DiscardBitTotal;					//discard bit number
+
+    double SendPacketTotal;					//send packet number
+
+	double SendBlockTotal;					//send block number
+
+	double SendBitTotal;						//the throughput of the MT
+
+	double PacketDelayTotal;				//packet delay total
+
 
 
 	unordered_set<GAIN_INFO*> comm_mt;
@@ -44,6 +59,8 @@ public:
 
 	MT_INFO(int id);
 	MT_INFO();
+
+    void Sending_data(double simultime);
 
 	~MT_INFO(void);
 

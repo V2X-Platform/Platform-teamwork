@@ -41,16 +41,19 @@ int main()
     create_base.Output_sitevect();                                             //输出基站位置
 
     create_mt.Create_newmt(ss.mt_list);                                        //创建用户
-    mt2mtgain_cac.Cac_pathloss(ss.base_list,ss.mt_list);                                            //计算用户间路径损耗
-    mt2bsgain_cac.Cac_pathloss(ss.base_list,ss.mt_list);                                            //计算基站用户间路径损耗
 
     //for(SubFrame_index=0;SubFrame_index<SubFrame_num;SubFrame_index++)
     {
+        //此处还需要一个对车辆位置进行更新的函数；
+        mt2mtgain_cac.Cac_pathloss(ss.base_list,ss.mt_list);                                            //计算用户间路径损耗
+        mt2bsgain_cac.Cac_pathloss(ss.base_list,ss.mt_list);                                            //计算基站用户间路径损耗
         //simul_time = SubFrame_index*sys_subframe_time;
         mt2mtgain_cac.store_gain(ss.mt_list,ss.carrier);
         mt2bsgain_cac.store_gain(ss.mt_list,ss.base_list,ss.carrier);
         mt2mttb_cac.Cac_Tbinfo(ss.mt_list,ss.carrier,bler_data);
         mt2bstb_cac.Cac_Tbinfo(ss.base_list,ss.carrier,bler_data);
+
+
     }
 
 
