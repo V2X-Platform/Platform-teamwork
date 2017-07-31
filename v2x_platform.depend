@@ -281,7 +281,7 @@
 	<iostream>
 	<fstream>
 
-1494214924 c:\users\yty\desktop\platform-teamwork\system_para.h
+1501519407 c:\users\yty\desktop\platform-teamwork\system_para.h
 	"stdafx.h"
 	<math.h>
 	<utility>
@@ -292,7 +292,7 @@
 
 1490737490 c:\users\yty\desktop\platform-teamwork\display.h
 
-1494404613 source:c:\users\yty\desktop\platform-teamwork\gain_info.cpp
+1501435773 source:c:\users\yty\desktop\platform-teamwork\gain_info.cpp
 	"system_para.h"
 	"scenario_para.h"
 	"gain_info.h"
@@ -306,7 +306,7 @@
 	"system_para.h"
 	<utility>
 
-1494427683 source:c:\users\yty\desktop\platform-teamwork\main.cpp
+1501437221 source:c:\users\yty\desktop\platform-teamwork\main.cpp
 	<iostream>
 	<stdlib.h>
 	<list>
@@ -339,13 +339,17 @@
 	"gain_info.h"
 	<vector>
 
-1501438091 c:\users\yty\desktop\platform-teamwork\mt_info.h
+1501522200 c:\users\yty\desktop\platform-teamwork\mt_info.h
 	"system_para.h"
 	"scenario_para.h"
 	"gain_info.h"
+	"TranspotBlock.h"
+	"AckInfo.h"
 	<unordered_set>
 	<utility>
 	<vector>
+	<deque>
+	<list>
 
 1490949828 c:\users\yty\desktop\platform-teamwork\extern.h
 	"system_Para.h"
@@ -428,13 +432,14 @@
 	<stdlib.h>
 	<math.h>
 
-1494345326 source:c:\users\yty\desktop\platform-teamwork\base_info.cpp
+1501521802 source:c:\users\yty\desktop\platform-teamwork\base_info.cpp
 	"stdafx.h"
 	"base_info.h"
 	"system_para.h"
 	"extern.h"
+	"mt_info.h"
 
-1494428224 source:c:\users\yty\desktop\platform-teamwork\gain_cac.cpp
+1495354739 source:c:\users\yty\desktop\platform-teamwork\gain_cac.cpp
 	"stdafx.h"
 	"gain_cac.h"
 	"system_para.h"
@@ -526,4 +531,21 @@
 1494346212 source:c:\users\yty\desktop\platform-teamwork\tools.cpp
 	"tools.h"
 	"stdafx.h"
+
+1501521336 c:\users\yty\desktop\platform-teamwork\transpotblock.h
+	"system_para.h"
+	"scenario_para.h"
+
+1501521402 source:c:\users\yty\desktop\platform-teamwork\ackinfo.cpp
+	"AckInfo.h"
+
+1501521434 c:\users\yty\desktop\platform-teamwork\ackinfo.h
+	"system_para.h"
+	"scenario_para.h"
+
+1501522170 source:c:\users\yty\desktop\platform-teamwork\datastatistic.cpp
+	"DataStatistic.h"
+
+1501437221 c:\users\yty\desktop\platform-teamwork\datastatistic.h
+	"simulation.h"
 

@@ -48,4 +48,14 @@ const double    Phi_tilt = sys_phi_tilt[1];           // Antenna Pattern中的垂直
 
 const bool      MT_omni = 1;
 
+
+//---------------- For SU-MIMO ----------------
+const int         nMtMaxLayernum = 1;
+//const int       sys_Max_layernum = 2;
+//const int       MT_pairing_Max = 1;//最大用户配对数
+//const int       Schedule_scheme = SU_MIMO;// SU_MIMO , MU_MIMO
+//const int       sys_BS_antnum = 4;
+//const int       sys_MT_antnum = 2;
+//------------------------------------------------------------*/
+
 #endif // SYSTEM_H_INCLUDED

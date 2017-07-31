@@ -32,11 +32,15 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AckInfo.cpp" />
+		<Unit filename="AckInfo.h" />
 		<Unit filename="DataStatistic.cpp" />
 		<Unit filename="DataStatistic.h" />
 		<Unit filename="HarqBuffer.h" />
-		<Unit filename="TbLock.cpp" />
-		<Unit filename="TbLock.h" />
+		<Unit filename="TrafficGenerate.cpp" />
+		<Unit filename="TrafficGenerate.h" />
+		<Unit filename="TranspotBlock.cpp" />
+		<Unit filename="TranspotBlock.h" />
 		<Unit filename="base_create.cpp" />
 		<Unit filename="base_create.h" />
 		<Unit filename="base_info.cpp" />

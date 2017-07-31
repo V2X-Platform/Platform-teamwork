@@ -5,9 +5,14 @@
 #include "system_para.h"
 #include "scenario_para.h"
 #include "gain_info.h"
+#include "TranspotBlock.h"
+#include "AckInfo.h"
 #include <unordered_set>
 #include <utility>
 #include <vector>
+#include <deque>
+#include <list>
+
 using namespace std;
 
 class MT_INFO
@@ -45,15 +50,17 @@ public:
 
 	double SendBlockTotal;					//send block number
 
-	double SendBitTotal;						//the throughput of the MT
+	double SendBitTotal;					//the throughput of the MT
 
 	double PacketDelayTotal;				//packet delay total
 
-
+	deque<TransportBlock*> TBQueue;           //待发送的TB块队列
 
 	unordered_set<GAIN_INFO*> comm_mt;
 
 	vector<GAIN_INFO*> comm_mt_list;
+
+	list<AckInfo*> ACK_list;
 
 public:
 
@@ -61,6 +68,8 @@ public:
 	MT_INFO();
 
     void Sending_data(double simultime);
+
+    void Add_block(int Block_num,double simul_time);
 
 	~MT_INFO(void);
 

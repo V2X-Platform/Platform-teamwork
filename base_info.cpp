@@ -48,7 +48,7 @@ BASE_INFO::~BASE_INFO(void)
 }
 
 
-void BASE_INFO::Sending_data(double simultime)
+/*void BASE_INFO::Sending_data(double simultime)
 {
 	double send_bnum;
 
@@ -72,14 +72,14 @@ void BASE_INFO::Sending_data(double simultime)
 
         //discardpacket_num = discardpacket_num + (*MtPtr)->discarding_packetnum;
 
-        (*MtPtr)->discarding_bitnum = 0;
+        //(*MtPtr)->DiscardBitTotal = 0;
 
-        (*MtPtr)->sending_packetnum = 0;
+        //(*MtPtr)->sending_packetnum = 0;
 
-        (*MtPtr)->discarding_packetnum = 0;
+        //(*MtPtr)->discarding_packetnum = 0;
 
-        (*MtPtr)->sendblock_num = 0;
-			//----------------------------------------------------------*/
+        //(*MtPtr)->sendblock_num = 0;
+			//----------------------------------------------------------
         //vec_change += (*MtPtr)->change;
 
         //vec_unchange += (*MtPtr)->unchange;
@@ -116,7 +116,7 @@ void BASE_INFO::Sending_data(double simultime)
 			(*MtPtr)->discarding_packetnum = 0;
 
 			(*MtPtr)->sendblock_num = 0;
-			//----------------------------------------------------------*/
+			//----------------------------------------------------------
 			//vec_change += (*MtPtr)->change;
 
 			//vec_unchange += (*MtPtr)->unchange;
@@ -127,4 +127,4 @@ void BASE_INFO::Sending_data(double simultime)
 		}
 	}
 
-}
+}*/

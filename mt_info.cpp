@@ -16,6 +16,8 @@ MT_INFO::MT_INFO(int id)
 	SendBlockTotal = 0;
 
 	SendBitTotal = 0;
+
+	ACK_list.clear();
 }
 
 MT_INFO::MT_INFO(){}
@@ -31,6 +33,19 @@ void MT_INFO::Sending_data(double simultime)
 	//res_num = 0;
 
 	//serving_state = FALSE;
+}
+
+void MT_INFO::Add_block(int Block_num,double simul_time)
+{
+	for(int k=0;k<Block_num;k++)
+	{
+		TransportBlock* m_pTransporBlock= new TransportBlock(packet_topid,block_topid,simul_time);
+
+		TBQueue.push_back(m_pTransporBlock);
+
+		block_topid++;
+		block_num++;
+	}
 }
 
 MT_INFO::~MT_INFO(void){}
